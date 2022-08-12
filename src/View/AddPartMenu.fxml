@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Control.AddPartMenuController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label alignment="CENTER" text="Add Part">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="inHouseRadioBtn" mnemonicParsing="false" selected="true" text="In-House">
+                            <HBox.margin>
+                                <Insets left="60.0"/>
+                            </HBox.margin>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="partSourceRadioGroup"/>
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="OutSourceRadioBtn" mnemonicParsing="false" text="Outsourced"
+                                     toggleGroup="$partSourceRadioGroup">
+                            <HBox.margin>
+                                <Insets left="60.0"/>
+                            </HBox.margin>
+                        </RadioButton>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefWidth="90.0" text="ID"/>
+                        <TextField fx:id="partIDTextField" editable="false" promptText="Disabled - Auto Gen">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefWidth="90.0" text="Name"/>
+                        <TextField fx:id="partNameTextField">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefWidth="90.0" text="Inv"/>
+                        <TextField fx:id="partInvTextField">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="310.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefWidth="90.0" text="Price/Cost"/>
+                        <TextField fx:id="partPriceTextField">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="330.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefWidth="90.0" text="Max"/>
+                        <TextField fx:id="partMaxTextField">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Label prefWidth="60.0" text="Min">
+                            <HBox.margin>
+                                <Insets left="20.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="partMinTextField">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="343.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="partSourceLbl" prefWidth="90.0" text="Machine ID"/>
+                        <TextField fx:id="partMachineIDTextField">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onClickSavePart" text="Save">
+                            <HBox.margin>
+                                <Insets right="30.0"/>
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onClickDisplayMainMenu" text="Cancel">
+                            <HBox.margin>
+                                <Insets right="100.0"/>
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets left="20.0"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

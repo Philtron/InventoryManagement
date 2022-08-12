@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ModifyProductMenuController">
+    <children>
+        <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="870.0" style="-fx-border-style: solid; -fx-border-radius: 10 10 10 10;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="435.0">
+                    <children>
+                        <AnchorPane prefHeight="52.0" prefWidth="399.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="35.0" layoutY="26.0" text="Modify Product">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <HBox prefHeight="60.0" prefWidth="400.0">
+                            <children>
+                                <Label prefWidth="60.0" text="ID">
+                                    <HBox.margin>
+                                        <Insets left="20.0" right="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="productIDTextField" editable="false" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets top="100.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="27.0" prefHeight="60.0" prefWidth="400.0">
+                            <children>
+                                <Label prefWidth="60.0" text="Name">
+                                    <HBox.margin>
+                                        <Insets left="20.0" right="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="productNameTextField" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="127.0" prefHeight="60.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="60.0" text="Inv">
+                                    <HBox.margin>
+                                        <Insets left="20.0" right="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="productInvTextField" prefWidth="75.0" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="127.0" prefHeight="60.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="60.0" text="Price">
+                                    <HBox.margin>
+                                        <Insets left="20.0" right="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="productPriceTextField" prefWidth="75.0" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="327.0" prefHeight="60.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="60.0" text="Max">
+                                    <HBox.margin>
+                                        <Insets left="20.0" right="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="productMaxTextField" prefWidth="60.0" />
+                                <Label text="Min">
+                                    <HBox.margin>
+                                        <Insets left="20.0" right="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="productMinTextField" maxWidth="60.0">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </TextField>
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox prefHeight="600.0" prefWidth="435.0">
+                    <children>
+                        <AnchorPane prefHeight="52.0" prefWidth="399.0">
+                            <children>
+                                <TextField fx:id="allPartsSearchTextField" layoutX="246.0" layoutY="13.0" onAction="#onActionSearchParts" />
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="allPartsTableView" prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn fx:id="allPartsIDCol" prefWidth="90.0" text="Part ID" />
+                                <TableColumn fx:id="allPartsNameCol" prefWidth="90.0" text="Part Name" />
+                                <TableColumn fx:id="allPartsInvCol" prefWidth="100.0" text="Inventory Level" />
+                                <TableColumn fx:id="allPartsPriceCol" prefWidth="120.0" text="Price/Cost per Unit" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets right="20.0" />
+                            </VBox.margin>
+                        </TableView>
+                        <AnchorPane prefHeight="50.0" prefWidth="399.0">
+                            <children>
+                                <Button layoutX="308.0" layoutY="7.0" mnemonicParsing="false" onAction="#onClickAddToAssociatedParts" text="Add" />
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="associatedPartsTableView" prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn fx:id="associatedPartsIDCol" prefWidth="90.0" text="Part ID" />
+                                <TableColumn fx:id="associatedPartsNameCol" prefWidth="90.0" text="Part Name" />
+                                <TableColumn fx:id="associatedPartsInvCol" prefWidth="100.0" text="Inventory Level" />
+                                <TableColumn fx:id="associatedPartsPriceCol" prefWidth="120.0" text="Price/Cost per Unit" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets right="20.0" />
+                            </VBox.margin>
+                        </TableView>
+                        <AnchorPane prefHeight="33.0" prefWidth="399.0">
+                            <children>
+                                <Button layoutX="213.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickRemoveFromAssociatedParts" prefHeight="25.0" prefWidth="150.0" text="Remove Associated Part" />
+                            </children>
+                        </AnchorPane>
+                        <HBox alignment="TOP_RIGHT" prefHeight="102.0" prefWidth="399.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#onClickAddProduct" text="Save">
+                                    <HBox.margin>
+                                        <Insets right="58.0" top="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#onClickDisplayMainMenu" text="Cancel">
+                                    <HBox.margin>
+                                        <Insets right="55.0" top="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </HBox>
+    </children>
+</AnchorPane>
